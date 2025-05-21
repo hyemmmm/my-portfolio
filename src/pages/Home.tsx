@@ -113,7 +113,7 @@ export default function Home() {
               <Grid key={index} size={{ xs: 6, sm: 4, md: 3 }}>
                 <Chip
                   avatar={<Avatar alt={skill.label} src={skill.icon} />}
-                  label={`${skill.label} ${skill.level}`}
+                  label={`${skill.label}`}
                   variant="outlined"
                   sx={{
                     fontWeight: 500,

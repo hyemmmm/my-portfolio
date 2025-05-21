@@ -1,10 +1,46 @@
 export const skillData = [
-  { label: "React", level: "고급", icon: "/icons/react.png" },
-  { label: "Zustand", level: "중급", icon: "/icons/zustand.jpg" },
-  { label: "TypeScript", level: "중급", icon: "/icons/typescript.png" },
-  { label: "CSS-in-JS", level: "고급", icon: "/icons/css.png" },
-  { label: "GitHub", level: "중급", icon: "/icons/github.png" },
-  { label: "Jira", level: "중급", icon: "/icons/jira.png" },
-  { label: "Confluence", level: "중급", icon: "/icons/confluence.png" },
-  { label: "Figma", level: "초급", icon: "/icons/figma.png" },
+  {
+    label: "HTML",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
+  },
+  {
+    label: "CSS",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
+  },
+  {
+    label: "JavaScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
+  },
+  {
+    label: "TypeScript",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
+  },
+  {
+    label: "React",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+  },
+  {
+    label: "Redux Toolkit",
+    icon: "/icons/redux-toolkit.png", // 아이콘 없으면 직접 추가 필요
+  },
+  {
+    label: "Zustand",
+    icon: "/icons/zustand.jpg",
+  },
+  {
+    label: "React Query",
+    icon: "/icons/react-query.png",
+  },
+  {
+    label: "Styled-components",
+    icon: "/icons/styled-components.png",
+  },
+  {
+    label: "Three.js",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg",
+  },
+  {
+    label: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+  },
 ];

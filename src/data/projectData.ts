@@ -23,16 +23,31 @@ export const projectData = [
       "모바일 디바이스에서 동작하는 위치기반 협업 툴로, SSR 기술을 통해 디바이스 성능에 구애받지 않는 3D 시각화 및 협업 기능을 제공합니다.",
     link: "https://www.notion.so/3D-Note-147b48a2365f81979bcdefeda46cd816?pvs=21",
     image: threeDNote,
+    skills: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "styled-components",
+      "axios",
+      "zustand",
+      "react-query",
+      "Three.js",
+      "Vitest",
+      "testing-library",
+      "playwright",
+    ],
     features: [
       {
         title: "로그인",
         image: loginPage,
         items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
       },
       {
         title: "프로젝트 선택",
         image: projectPage,
         items: ["✅ **프로젝트 선택**"],
+        skills: [],
       },
       {
         title: "3D 보기",
@@ -47,11 +62,17 @@ export const projectData = [
           "✅ **페이지 전환 기능**",
           "✅ **로그아웃**",
         ],
+        skills: [
+          "react-three",
+          "WebRTC",
+          "Gesture CameraControls (Custom-built)",
+        ],
       },
       {
         title: "노트 리스트",
         image: note_list,
         items: ["✅ 노트 리스트 출력", "✅ 노트 검색 기능"],
+        skills: ["react-query"],
       },
       {
         title: "노트 필터",
@@ -63,6 +84,7 @@ export const projectData = [
           "✅ 필터 적용",
           "✅ 필터 초기화",
         ],
+        skills: ["react-query"],
       },
       {
         title: "노트 상세보기",
@@ -75,6 +97,7 @@ export const projectData = [
           "✅ 노트 이슈 종결 처리",
           "✅ 노트 삭제",
         ],
+        skills: ["react-query"],
       },
       {
         title: "노트 댓글",
@@ -86,11 +109,13 @@ export const projectData = [
           "✅ 3D 보기와 연동된 위치 이동",
           "✅ 노트 이슈 종결 처리",
         ],
+        skills: ["rc-mentions", "react-query"],
       },
       {
         title: "노트 수정",
         image: note_edit,
         items: ["✅ 노트의 각 항목 수정"],
+        skills: ["react-query"],
       },
       {
         title: "BIM 부재",
@@ -100,6 +125,7 @@ export const projectData = [
           "✅ BIM 부재 선택 및 해제",
           "✅ 전체 선택 기능",
         ],
+        skills: ["TreeView Component (Custom-built)"],
       },
       {
         title: "동 선택",
@@ -109,6 +135,7 @@ export const projectData = [
           "✅ 동별 BIM 부재 트리 출력",
           "✅ BIM 부재 선택 및 해제",
         ],
+        skills: ["TreeView Component (Custom-built)"],
       },
       {
         title: "도면 리스트",
@@ -126,6 +153,7 @@ export const projectData = [
           "✅ 도면 보기 기능(dxf, pdf 지원)",
           "✅ 도면 뷰어 확대/축소, 이동 기능",
         ],
+        skills: ["dxf-viewer", "react-pdf"],
       },
       {
         title: "물량 확인",

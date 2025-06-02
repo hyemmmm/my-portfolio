@@ -78,17 +78,21 @@ export default function ProjectDetail() {
                   gap={4}
                   sx={{ flexGrow: 1 }}
                 >
-                  <Box sx={{ flexShrink: 0 }}>
-                    <img
-                      src={feature.image}
-                      alt={`${feature.title} 캡처`}
-                      style={{
-                        height: "200px",
-                        boxShadow: "0 0 10px rgba(0,0,0,0.3)",
-                        maxWidth: "100%",
-                      }}
-                    />
-                  </Box>
+                  {feature.image && (
+                    <Box sx={{ flexShrink: 0 }}>
+                      <img
+                        src={feature.image}
+                        alt={`${feature.title} 캡처`}
+                        style={{
+                          ...(feature.imageType === "mobile"
+                            ? { height: "200px" }
+                            : { width: "280px" }),
+                          boxShadow: "0 0 10px rgba(0,0,0,0.3)",
+                          maxWidth: "100%",
+                        }}
+                      />
+                    </Box>
+                  )}
                   <Box sx={{ flexGrow: 1 }}>
                     {feature.items.map((item, idx) => (
                       <Typography key={idx} variant="body1" paragraph>

@@ -2,7 +2,7 @@ import { Box, Container, Typography, Grid, Chip, Avatar } from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import PhoneIcon from "@mui/icons-material/Phone";
 import GlobalStyles from "../styles/GlobalStyles";
-import { projectData } from "../data/projectData";
+import { otherProjects, projectData } from "../data/projectData";
 import { skillData } from "../data/skillData";
 import styled from "@emotion/styled";
 import SectionCard from "../components/SectionCard";
@@ -93,6 +93,20 @@ export default function Home() {
               <Typography variant="h6" fontWeight={600} sx={{}}>
                 {project.title}
               </Typography>
+              {project.period && (
+                <Typography
+                  variant="caption"
+                  sx={{
+                    fontStyle: "italic",
+                    color: "#aaa",
+                    display: "block",
+                    mb: 1,
+                  }}
+                >
+                  📅 {project.period}
+                </Typography>
+              )}
+
               <Typography variant="body2" paragraph sx={{ lineHeight: 1.6 }}>
                 {project.description}
               </Typography>
@@ -102,6 +116,63 @@ export default function Home() {
               >
                 자세히 보기 →
               </ViewDetail>
+            </Box>
+          ))}
+
+          <Box sx={{ mt: 6, pt: 4, borderTop: "1px solid #444" }}>
+            <Typography
+              variant="h6"
+              fontWeight={700}
+              sx={{ color: "#90caf9", mb: 2 }}
+            >
+              기타 프로젝트
+            </Typography>
+          </Box>
+
+          {otherProjects.map((project, index) => (
+            <Box key={index} mb={3}>
+              <Typography variant="subtitle1" fontWeight={600}>
+                {project.title}
+              </Typography>
+              {project.period && (
+                <Typography
+                  variant="caption"
+                  sx={{
+                    fontStyle: "italic",
+                    color: "#aaa",
+                    display: "block",
+                    mb: 0.5,
+                  }}
+                >
+                  📅 {project.period}
+                </Typography>
+              )}
+              <Typography variant="body2" sx={{ color: "#ddd" }}>
+                {project.description}
+              </Typography>
+              {project.skills && (
+                <Box sx={{ mt: 1, display: "flex", gap: 1, flexWrap: "wrap" }}>
+                  {project.skills.map((skill, i) => (
+                    <Chip
+                      key={i}
+                      label={skill}
+                      size="small"
+                      variant="outlined"
+                      sx={{
+                        fontWeight: 500,
+                        color: "#90caf9",
+                        borderColor: "#90caf9",
+                        backgroundColor: "#2c2c2c",
+                      }}
+                    />
+                  ))}
+                </Box>
+              )}
+              {project.note && (
+                <Typography variant="caption" sx={{ color: "#888", mt: 0.5 }}>
+                  ※ {project.note}
+                </Typography>
+              )}
             </Box>
           ))}
         </SectionCard>

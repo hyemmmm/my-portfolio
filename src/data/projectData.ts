@@ -19,6 +19,11 @@ import cd_projects from "../assets/images/change_detection/cd-projects.png";
 import cd_analysis from "../assets/images/change_detection/cd-analysis.png";
 import cd_resultView from "../assets/images/change_detection/cd-resultView.png";
 import cd_views from "../assets/images/change_detection/cd-views.png";
+import starting_resume_edit from "../assets/images/starting/starting-resume-edit.png";
+import starting_resume_view from "../assets/images/starting/s-resume-view.png";
+import starting_main from "../assets/images/starting/s-main.png";
+import starting_mypage from "../assets/images/starting/s-mypage.png";
+import starting_video from "../assets/videos/starting.mp4";
 
 export const projectData = [
   {
@@ -26,6 +31,7 @@ export const projectData = [
     title: "01. 3D Note (Hybrid App)",
     description:
       "모바일 디바이스에서 동작하는 위치기반 협업 툴로, SSR 기술을 통해 디바이스 성능에 구애받지 않는 3D 시각화 및 협업 기능을 제공합니다.",
+    period: "2024.08 ~",
     link: "https://www.notion.so/3D-Note-147b48a2365f81979bcdefeda46cd816?pvs=21",
     image: threeDNote,
     skills: [
@@ -185,106 +191,219 @@ export const projectData = [
       },
     ],
   },
+  // {
+  //   id: "change-detection",
+  //   title: "02. Change Detection",
+  //   description:
+  //     "BIM 정보와 Point Cloud 데이터를 비교하여 시설물 변화 여부를 탐지하는 웹 기반 솔루션입니다.",
+  //   period: "2024.04 ~ 2024.05",
+  //   link: "https://www.notion.so/Change-Detection-147b48a2365f813daf6dff31ace800b6?pvs=21",
+  //   image: changeD,
+  //   skills: [
+  //     "React",
+  //     "TypeScript",
+  //     "Vite",
+  //     "Zustand",
+  //     "Recoil",
+  //     "MUI (Material UI)",
+  //     "Styled-components",
+  //     "Three.js",
+  //     "camera-controls",
+  //     "ExcelJS",
+  //   ],
+  //   features: [
+  //     {
+  //       title: "DATA",
+  //       image: cd_data,
+  //       items: ["✅ BIM/PCD 데이터 업로드 화면 UI 구현"],
+  //       skills: [],
+  //       imageType: "desktop",
+  //     },
+  //     {
+  //       title: "PROJECTS",
+  //       image: cd_projects,
+  //       items: [
+  //         "✅ 프로젝트 리스트 출력 및 선택",
+  //         "✅ 새로운 프로젝트 생성 기능",
+  //         "✅ 프로젝트 선택 시 현재 프로젝트 정보 출력",
+  //       ],
+  //       skills: ["zustand"],
+  //       imageType: "desktop",
+  //     },
+  //     {
+  //       title: "ANALYSIS",
+  //       image: cd_analysis,
+  //       items: [
+  //         "✅ 분석 실행 및 진행률 표시",
+  //         "✅ 분석 시간, 진행 로그, 결과 차트 실시간 표시",
+  //       ],
+  //       skills: [],
+  //       imageType: "desktop",
+  //     },
+  //     {
+  //       title: "VIEW",
+  //       image: cd_views,
+  //       items: [
+  //         "✅ BIM + PCD 3D 데이터 출력",
+  //         "✅ PointCloud 보기/숨기기 토글",
+  //         "✅ 노드 더블 클릭 시 해당 부재 하이라이팅 및 확대",
+  //         "✅ View 모달 내 이미지 저장 기능",
+  //       ],
+  //       skills: ["Three.js", "camera-controls"],
+  //       imageType: "desktop",
+  //     },
+  //     {
+  //       title: "RESULT VIEW",
+  //       image: cd_resultView,
+  //       items: [
+  //         "✅ 분석 결과 전체 시각화",
+  //         "✅ BIM/PCD 토글, Color/Gray 모드 전환",
+  //         "✅ 분석된 부재 리스트 출력 및 선택 시 클리핑 포인트 표시",
+  //         "✅ 노드 더블 클릭 또는 Viewer 내 우클릭 시 해당 위치로 이동 및 팝업",
+  //         "✅ 3D 뷰 이미지 저장 기능",
+  //       ],
+  //       skills: ["Three.js", "camera-controls"],
+  //       imageType: "desktop",
+  //     },
+  //     {
+  //       title: "REPORTS",
+  //       items: [
+  //         "✅ 분석 결과 요약 테이블 출력",
+  //         "✅ BIM/PCD/Dist 체크에 따른 항목 필터링",
+  //         "✅ 각 행 클릭 시 해당 BIM 부재 출력",
+  //         "✅ 모달 내 이미지 저장 기능",
+  //         "✅ 엑셀 보고서 다운로드",
+  //       ],
+  //       skills: ["ExcelJS"],
+  //       imageType: "desktop",
+  //     },
+  //   ],
+  // },
   {
-    id: "change-detection",
-    title: "02. Change Detection",
+    id: "starting",
+    title: "02. Start-ing",
     description:
-      "BIM 정보와 Point Cloud 데이터를 비교하여 시설물 변화 여부를 탐지하는 웹 기반 솔루션입니다.",
-    link: "https://www.notion.so/Change-Detection-147b48a2365f813daf6dff31ace800b6?pvs=21",
-    image: changeD,
+      "직무경험 기반 이력서 제작 웹 서비스로, 편리한 편집과 높은 가독성을 제공합니다.",
+    period: "2022.12 ~ 2024.03",
+    link: starting,
+    image: starting,
     skills: [
-      "React",
+      "Next.js",
       "TypeScript",
-      "Vite",
-      "Zustand",
-      "Recoil",
-      "MUI (Material UI)",
+      "Redux-Toolkit",
       "Styled-components",
-      "Three.js",
-      "camera-controls",
-      "ExcelJS",
+      "React Query",
+      "react-hook-form",
+      "Quill",
+      "Sentry",
+      "ESLint",
+      "Prettier",
     ],
     features: [
       {
-        title: "DATA",
-        image: cd_data,
-        items: ["✅ BIM/PCD 데이터 업로드 화면 UI 구현"],
-        skills: [],
-        imageType: "desktop",
+        title: "메인페이지",
+        image: starting_main,
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
       },
       {
-        title: "PROJECTS",
-        image: cd_projects,
-        items: [
-          "✅ 프로젝트 리스트 출력 및 선택",
-          "✅ 새로운 프로젝트 생성 기능",
-          "✅ 프로젝트 선택 시 현재 프로젝트 정보 출력",
-        ],
-        skills: ["zustand"],
-        imageType: "desktop",
+        title: "로그인",
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
       },
       {
-        title: "ANALYSIS",
-        image: cd_analysis,
-        items: [
-          "✅ 분석 실행 및 진행률 표시",
-          "✅ 분석 시간, 진행 로그, 결과 차트 실시간 표시",
-        ],
-        skills: [],
-        imageType: "desktop",
+        title: "회원가입",
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
       },
       {
-        title: "VIEW",
-        image: cd_views,
-        items: [
-          "✅ BIM + PCD 3D 데이터 출력",
-          "✅ PointCloud 보기/숨기기 토글",
-          "✅ 노드 더블 클릭 시 해당 부재 하이라이팅 및 확대",
-          "✅ View 모달 내 이미지 저장 기능",
-        ],
-        skills: ["Three.js", "camera-controls"],
-        imageType: "desktop",
+        title: "아이디/비밀번호 찾기",
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
       },
       {
-        title: "RESULT VIEW",
-        image: cd_resultView,
-        items: [
-          "✅ 분석 결과 전체 시각화",
-          "✅ BIM/PCD 토글, Color/Gray 모드 전환",
-          "✅ 분석된 부재 리스트 출력 및 선택 시 클리핑 포인트 표시",
-          "✅ 노드 더블 클릭 또는 Viewer 내 우클릭 시 해당 위치로 이동 및 팝업",
-          "✅ 3D 뷰 이미지 저장 기능",
-        ],
-        skills: ["Three.js", "camera-controls"],
-        imageType: "desktop",
+        title: "이력서 편집",
+        image: starting_resume_edit,
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
       },
       {
-        title: "REPORTS",
-        items: [
-          "✅ 분석 결과 요약 테이블",
-          "✅ BIM/PCD/Dist 체크에 따른 항목 필터링",
-          "✅ 각 행 클릭 시 해당 BIM 부재 출력",
-          "✅ 모달 내 이미지 저장 기능",
-          "✅ 엑셀 보고서 다운로드",
-        ],
-        skills: ["ExcelJS"],
-        imageType: "desktop",
+        title: "이력서 보기",
+        image: starting_resume_view,
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
       },
+      {
+        title: "마이페이지",
+        image: starting_mypage,
+        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        skills: ["JWT", "i18n"],
+        imageType: "mobile",
+      },
+    ],
+    video: starting_video,
+  },
+];
+
+export const otherProjects = [
+  {
+    title: "H-eagle 통계조회 사이트 개발",
+    period: "2025.05",
+    description: "공사별 품질검토 통계 차트 및 필터링 기능 개발",
+    skills: ["React", "Zustand", "Chart.js"],
+  },
+  {
+    title: "H-eagle 유지보수",
+    period: "2025.04",
+    description: "건설 품질관리 시스템 운영 중 발생하는 이슈 수정 및 기능 개선",
+    skills: ["React", "Recoil", "React Query"],
+  },
+  {
+    title: "3D Note Admin",
+    period: "2025.01 ~ 2025.03",
+    description:
+      "3D Note 프로젝트용 관리자 페이지 개발 (데이터 관리, 사용자 승인 등)",
+    skills: ["React", "Zustand", "MUI"],
+  },
+  {
+    title: "C-eagle 도면 뷰어 기능 추가",
+    period: "2024.07",
+    description: "도면 뷰어 기능 추가 (DXF 파일 확대/이동/회전 기능)",
+    skills: ["React", "react-pdf", "File Handling"],
+  },
+  {
+    title: "3D Chat (중단된 프로젝트)",
+    period: "2024.06 ~ 2024.07",
+    description: "WebRTC + Three.js 기반 협업 뷰어 프로토타입 개발",
+    skills: ["React", "Three.js", "WebRTC"],
+    note: "기획 변경으로 중단",
+  },
+  {
+    title: "Change Detection (BIM/PCD 분석 솔루션)",
+    period: "2024.04 ~ 2024.05",
+    description:
+      "BIM과 Point Cloud 데이터를 비교 분석하는 건축 솔루션 UI 개발 참여. 프로젝트 생성, 분석 실행, 시각화, 리포트 테이블 기능 등 구현",
+    skills: [
+      "React",
+      "TypeScript",
+      "Three.js",
+      "Zustand",
+      "MUI",
+      "ExcelJS",
+      "camera-controls",
     ],
   },
   {
-    id: "starting",
-    title: "03. Start-ing",
+    title: "Start-ing 관리자 페이지",
+    period: "2023.06 ~ 2023.07",
     description:
-      "직무경험 기반 이력서 제작 웹 서비스로, 편리한 편집과 높은 가독성을 제공합니다.",
-    link: starting,
-    image: starting,
-  },
-  {
-    id: "starting-admin",
-    title: "04. Starting 관리자 페이지",
-    description: "이력서 제작 서비스의 관리자 전용 페이지입니다.",
-    link: starting_admin,
-    image: starting_admin,
+      "이력서 서비스 관리 기능 개발 (권한 관리, 유저 검색, 이력서 검수 등)",
+    skills: ["React", "TypeScript", "Styled-components", "React Query"],
   },
 ];

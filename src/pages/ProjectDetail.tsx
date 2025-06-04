@@ -1,15 +1,35 @@
-import { Box, Container, Typography, Grid, Chip } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  Grid,
+  Chip,
+  Dialog,
+  DialogContent,
+  IconButton,
+} from "@mui/material";
 import SectionCard from "../components/SectionCard";
 import GlobalStyles from "../styles/GlobalStyles";
 import loginPage from "../assets/images/3dnote/login_page.jpg";
 import { useParams } from "react-router-dom";
 import { projectData } from "../data/projectData";
-import { primaryColor } from "../styles/colors";
+import CloseIcon from "@mui/icons-material/Close";
+import { useEffect, useRef, useState } from "react";
 
 export default function ProjectDetail() {
   const { id } = useParams();
 
+  const [openVideo, setOpenVideo] = useState(false);
+
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+
   const project = projectData.find((item) => item.id === id);
+
+  const handleLoadedMetadata = () => {
+    if (videoRef.current) {
+      videoRef.current.playbackRate = 2;
+    }
+  };
 
   return (
     <>
@@ -27,6 +47,68 @@ export default function ProjectDetail() {
         <Typography variant="h4" fontWeight={800} gutterBottom mb={6}>
           개발한 페이지 및 기능 ({id})
         </Typography>
+        {project?.video && (
+          <>
+            <Box sx={{ mb: 4 }}>
+              <Chip
+                label="📽 video 보기"
+                onClick={() => setOpenVideo(true)}
+                clickable
+                sx={{
+                  fontSize: "16px",
+                  px: 2,
+                  py: 1,
+                  backgroundColor: "#2c2c2c",
+                  color: "#90caf9",
+                  border: "1px solid #90caf9",
+                  borderRadius: "12px",
+                  cursor: "pointer",
+                }}
+              />
+            </Box>
+
+            <Dialog
+              open={openVideo}
+              onClose={() => setOpenVideo(false)}
+              maxWidth="md"
+              fullWidth
+            >
+              <DialogContent
+                sx={{ position: "relative", p: 0, background: "#000" }}
+              >
+                <IconButton
+                  onClick={() => setOpenVideo(false)}
+                  sx={{
+                    position: "absolute",
+                    top: 8,
+                    right: 8,
+                    zIndex: 10,
+                    color: "#fff",
+                  }}
+                >
+                  <CloseIcon />
+                </IconButton>
+
+                <video
+                  ref={videoRef}
+                  src={project.video}
+                  autoPlay
+                  controls
+                  onLoadedMetadata={handleLoadedMetadata}
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    maxHeight: "80vh",
+                    borderRadius: "8px",
+                    display: "block",
+                    backgroundColor: "#000",
+                  }}
+                />
+              </DialogContent>
+            </Dialog>
+          </>
+        )}
+
         <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
           <Box
             sx={{
@@ -93,6 +175,7 @@ export default function ProjectDetail() {
                       />
                     </Box>
                   )}
+
                   <Box sx={{ flexGrow: 1 }}>
                     {feature.items.map((item, idx) => (
                       <Typography key={idx} variant="body1" paragraph>

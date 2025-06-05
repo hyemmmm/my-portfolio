@@ -9,9 +9,22 @@ import SectionCard from "../components/SectionCard";
 import { secondaryColor } from "../styles/colors";
 import Experience from "../components/Experience";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import ProjectOverview from "../components/ProjectOverview";
+import EtcProjectDetail from "../components/EtcProjectDetail";
 
 export default function Home() {
   const navigate = useNavigate();
+
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  const handleOpenProjectDetail = (project: any) => {
+    setSelectedProject(project);
+  };
+
+  const handleCloseDialog = () => {
+    setSelectedProject(null);
+  };
 
   return (
     <>
@@ -30,7 +43,7 @@ export default function Home() {
             유저에게 실질적인 가치를 전달하는 프론트엔드 개발자 김혜민입니다.
           </Typography>
           <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-            3년간 React.js를 중심으로 웹과 하이브리드 앱을 개발하며,{" "}
+            3년간 React.js를 중심으로 <b>웹과 하이브리드 앱</b>을 개발하며,{" "}
             <b>사용자가 실제로 편리함을 느낄 수 있는 경험을 만드는데 집중</b>해
             왔습니다. 단순히 기획된 기능을 구현하는데 그치지 않고,{" "}
             <b>
@@ -88,92 +101,31 @@ export default function Home() {
 
         {/* Projects */}
         <SectionCard title="PROJECTS">
+          <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+            🚀 메인 프로젝트
+          </Typography>
           {projectData.map((project, index) => (
-            <Box key={index} mb={4}>
-              <Typography variant="h6" fontWeight={600} sx={{}}>
-                {project.title}
-              </Typography>
-              {project.period && (
-                <Typography
-                  variant="caption"
-                  sx={{
-                    fontStyle: "italic",
-                    color: "#aaa",
-                    display: "block",
-                    mb: 1,
-                  }}
-                >
-                  📅 {project.period}
-                </Typography>
-              )}
-
-              <Typography variant="body2" paragraph sx={{ lineHeight: 1.6 }}>
-                {project.description}
-              </Typography>
-              <ViewDetail
-                onClick={() => navigate(`/project/${project.id}`)}
-                style={{ fontWeight: "500", color: secondaryColor }}
-              >
-                자세히 보기 →
-              </ViewDetail>
-            </Box>
+            <ProjectOverview
+              key={index}
+              title={project.title}
+              period={project.period}
+              description={project.description}
+              onClickDetail={() => navigate(`/project/${project.id}`)}
+            />
           ))}
-
           <Box sx={{ mt: 6, pt: 4, borderTop: "1px solid #444" }}>
-            <Typography
-              variant="h6"
-              fontWeight={700}
-              sx={{ color: "#90caf9", mb: 2 }}
-            >
-              기타 프로젝트
+            <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+              📁 기타 프로젝트
             </Typography>
           </Box>
-
           {otherProjects.map((project, index) => (
-            <Box key={index} mb={3}>
-              <Typography variant="subtitle1" fontWeight={600}>
-                {project.title}
-              </Typography>
-              {project.period && (
-                <Typography
-                  variant="caption"
-                  sx={{
-                    fontStyle: "italic",
-                    color: "#aaa",
-                    display: "block",
-                    mb: 0.5,
-                  }}
-                >
-                  📅 {project.period}
-                </Typography>
-              )}
-              <Typography variant="body2" sx={{ color: "#ddd" }}>
-                {project.description}
-              </Typography>
-              {project.skills && (
-                <Box sx={{ mt: 1, display: "flex", gap: 1, flexWrap: "wrap" }}>
-                  {project.skills.map((skill, i) => (
-                    <Chip
-                      key={i}
-                      label={skill}
-                      size="small"
-                      variant="outlined"
-                      sx={{
-                        fontWeight: 500,
-                        color: "#90caf9",
-                        borderColor: "#90caf9",
-                        backgroundColor: "#2c2c2c",
-                      }}
-                    />
-                  ))}
-                </Box>
-              )}
-              {project.note && (
-                <Typography variant="caption" sx={{ color: "#888", mt: 0.5 }}>
-                  ※ {project.note}
-                </Typography>
-              )}
-            </Box>
+            <ProjectOverview
+              key={index}
+              title={project.title}
+              period={project.period}
+              description={project.description}
+              onClickDetail={() => handleOpenProjectDetail(project)}
+            />
           ))}
         </SectionCard>
 
@@ -197,13 +149,11 @@ export default function Home() {
           </Grid>
         </SectionCard>
       </Container>
+      <EtcProjectDetail
+        open={!!selectedProject}
+        onClose={handleCloseDialog}
+        project={selectedProject}
+      />
     </>
   );
 }
-
-const ViewDetail = styled.div`
-  &:hover {
-    text-decoration: underline;
-  }
-  cursor: pointer;
-`;

@@ -36,6 +36,14 @@ export const skillData = [
     icon: "/icons/styled-components.png",
   },
   {
+    label: "REST API",
+    icon: "/",
+  },
+  {
+    label: "axios",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/axios/axios-plain.svg",
+  },
+  {
     label: "Three.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg",
   },

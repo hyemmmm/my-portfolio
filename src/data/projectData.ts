@@ -1,7 +1,7 @@
 import threeDNote from "../assets/images/3dnote/3d_view.png";
 import changeD from "../assets/images/change_detection/change_detection.png";
 import starting from "../assets/images/starting/start-ing.png";
-import starting_admin from "../assets/images/starting/starting-admin.png";
+import sampleImage from "../assets/images/starting/starting-admin.png";
 import loginPage from "../assets/images/3dnote/login_page.jpg";
 import projectPage from "../assets/images/3dnote/project_page.jpg";
 import drawing_item from "../assets/images/3dnote/drawing_item.jpg";
@@ -282,7 +282,7 @@ export const projectData = [
   // },
   {
     id: "starting",
-    title: "02. Start-ing",
+    title: "02. Start-ing (Web)",
     description:
       "직무경험 기반 이력서 제작 웹 서비스로, 편리한 편집과 높은 가독성을 제공합니다.",
     period: "2022.12 ~ 2024.03",
@@ -387,17 +387,23 @@ export const projectData = [
 
 export const otherProjects = [
   {
-    title: "H-Eagle 통계조회 사이트 개발",
+    title: "문화유산 3D 시각화 솔루션(H-Eagle) 통계 웹사이트 개발",
     period: "2025.05",
     description:
       "문화유산 3D 시각화 솔루션(H-Eagle)의 사용량 데이터를 시각적으로 분석할 수 있는 관리자용 통계 대시보드 개발",
+    descriptionDetail:
+      "- MUI X Charts를 활용해 일간/주간/월간 단위 통계 시각화\n- useMemo를 활용해 대시보드 차트 영역의 리렌더링을 최소화하여 **성능 개선**",
     skills: ["React", "MUI X Charts", "Day.js"],
+    image: sampleImage,
+    isSampleImage: true,
   },
   {
-    title: "H-Eagle 유지보수",
+    title: "문화유산 3D 시각화 솔루션(H-Eagle) 유지보수",
     period: "2025.04",
     description:
       "문화유산 3D 시각화 솔루션(H-Eagle)의 운영 중 발견된 오류를 수정하고, 사용자 피드백을 반영해 기능 개선 작업 수행",
+    descriptionDetail:
+      "- 비정상 세션 정리 로직 추가\n- 사용자 요청 기반 UI 편의성 개선 (레이어 토글 기능 등)",
     skills: ["React", "Recoil", "React Query"],
   },
   {
@@ -405,12 +411,16 @@ export const otherProjects = [
     period: "2025.01 ~ 2025.03",
     description:
       "3D Note 프로젝트용 관리자 페이지 개발 (데이터 관리, 사용자 승인 등)",
+    descriptionDetail:
+      "- 유저/노트/데이터 일괄 관리 기능 개발\n- API 응답 기반 테이블 필터/정렬 구현",
     skills: ["React", "Zustand", "MUI"],
   },
   {
     title: "C-Eagle 도면 뷰어 기능 추가",
     period: "2024.07",
     description: "도면 뷰어 기능 추가 (DXF 파일 확대/이동/회전 기능)",
+    descriptionDetail:
+      "- 기존 PDF 뷰어 대비 DXF 전환으로 로딩 속도 개선\n- Canvas 기반 마우스 이동/휠 줌 기능 구현",
     skills: ["React"],
   },
   {
@@ -418,6 +428,8 @@ export const otherProjects = [
     period: "2024.06 ~ 2024.07",
     description:
       "3D 모델 파일(GLTF, FBX, IFC 등)을 채팅으로 공유하고, 즉시 데스크탑 뷰어에서 시각화할 수 있는 협업 도구 프로토타입 개발.",
+    descriptionDetail:
+      "- WebRTC 연결을 통한 실시간 3D 모델 송수신 구현\n- Drag & Drop 기반 3D 파일 공유\n- Three.js 뷰어와 채팅창 동기화 UI 설계",
     skills: [
       "Electron",
       "React",
@@ -433,6 +445,8 @@ export const otherProjects = [
     period: "2024.04 ~ 2024.05",
     description:
       "BIM과 Point Cloud 데이터를 비교 분석하는 건축 솔루션 UI 개발 참여.",
+    descriptionDetail:
+      "- 분석 결과를 BIM/PCD에 클리핑 포인트로 시각화\n- 분석 로그 및 상태 실시간 반영 UI 구현\n- 보고서 출력용 ExcelJS 연동",
     skills: [
       "React",
       "TypeScript",
@@ -442,12 +456,17 @@ export const otherProjects = [
       "ExcelJS",
       "camera-controls",
     ],
+    image: cd_resultView,
   },
   {
     title: "Start-ing 관리자 페이지",
     period: "2023.06 ~ 2023.07",
     description:
       "이력서 서비스 관리 기능 개발 (권한 관리, 유저 검색, 이력서 검수 등)",
+    descriptionDetail:
+      "- 사용자 상태별 필터링, 검색 기능 구현\n- 이력서 항목 검수 및 승인 기능 개발\n- 접근 권한에 따라 기능/화면 제어",
     skills: ["React", "TypeScript", "Styled-components", "React Query"],
+    image: sampleImage,
+    isSampleImage: true,
   },
 ];

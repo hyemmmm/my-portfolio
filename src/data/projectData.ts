@@ -23,6 +23,7 @@ import starting_resume_edit from "../assets/images/starting/starting-resume-edit
 import starting_resume_view from "../assets/images/starting/s-resume-view.png";
 import starting_main from "../assets/images/starting/s-main.png";
 import starting_mypage from "../assets/images/starting/s-mypage.png";
+import starting_sharing from "../assets/images/starting/starting-sharing.png";
 import starting_video from "../assets/videos/starting.mp4";
 
 export const projectData = [
@@ -295,6 +296,7 @@ export const projectData = [
       "React Query",
       "react-hook-form",
       "Quill",
+      "REST API",
       "Sentry",
       "ESLint",
       "Prettier",
@@ -303,48 +305,80 @@ export const projectData = [
       {
         title: "메인페이지",
         image: starting_main,
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
-        imageType: "mobile",
-      },
-      {
-        title: "로그인",
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
-        imageType: "mobile",
-      },
-      {
-        title: "회원가입",
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
-        imageType: "mobile",
-      },
-      {
-        title: "아이디/비밀번호 찾기",
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
+        items: [
+          "✅ **서비스 소개 및 랜딩페이지 제공**",
+          "✅ **반응형 UI 지원**",
+        ],
+        skills: [],
         imageType: "mobile",
       },
       {
         title: "이력서 편집",
         image: starting_resume_edit,
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
-        imageType: "mobile",
+        items: [
+          "✅ **경력, 학력, 프로젝트 등 섹션별 이력서 작성**",
+          "✅ **항목 추가/삭제 및 순서 변경 지원**",
+          "✅ **입력 시 자동 저장되는 실시간 편집 기능**",
+        ],
+        skills: ["react-hook-form", "Quill"],
+        imageType: "desktop",
       },
       {
         title: "이력서 보기",
         image: starting_resume_view,
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
+        items: [
+          "✅ **미리보기 및 공유용 이력서 화면 제공**",
+          "✅ **블라인드 보기 모드 지원**",
+          "✅ **모바일 환경에 최적화된 반응형 디자인**",
+        ],
+        skills: [],
         imageType: "mobile",
       },
       {
         title: "마이페이지",
         image: starting_mypage,
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
-        skills: ["JWT", "i18n"],
+        items: ["✅ **개인 정보 및 설정 변경 기능**"],
+        skills: [],
         imageType: "mobile",
+      },
+      {
+        title: "로그인",
+        items: [
+          "✅ **아이디/비밀번호 로그인 기능**",
+          "✅ **JWT 기반 인증 처리**",
+        ],
+
+        skills: ["JWT"],
+        imageType: "mobile",
+      },
+      {
+        title: "회원가입",
+        items: [
+          "✅ **이메일 인증 기반 회원가입 기능**",
+          "✅ **SNS(카카오) 회원가입 지원**",
+          "✅ **입력값 유효성 검사 및 에러 메시지 처리**",
+        ],
+        skills: [],
+        imageType: "mobile",
+      },
+      {
+        title: "아이디/비밀번호 찾기",
+        items: [
+          "✅ **이메일을 통한 비밀번호 재설정 기능**",
+          "✅ **사용자 인증 절차 제공**",
+        ],
+        skills: [],
+        imageType: "mobile",
+      },
+      {
+        title: "OG 데이터 대응",
+        image: starting_sharing,
+        items: [
+          "✅ **Next.js 마이그레이션을 통한 SSR 적용**",
+          "✅ **페이지별 OG 메타태그 설정으로 공유 최적화**",
+        ],
+        skills: ["Next.js", "SEO"],
+        imageType: "desktop",
       },
     ],
     video: starting_video,
@@ -353,15 +387,17 @@ export const projectData = [
 
 export const otherProjects = [
   {
-    title: "H-eagle 통계조회 사이트 개발",
+    title: "H-Eagle 통계조회 사이트 개발",
     period: "2025.05",
-    description: "공사별 품질검토 통계 차트 및 필터링 기능 개발",
-    skills: ["React", "Zustand", "Chart.js"],
+    description:
+      "문화유산 3D 시각화 솔루션(H-Eagle)의 사용량 데이터를 시각적으로 분석할 수 있는 관리자용 통계 대시보드 개발",
+    skills: ["React", "MUI X Charts", "Day.js"],
   },
   {
-    title: "H-eagle 유지보수",
+    title: "H-Eagle 유지보수",
     period: "2025.04",
-    description: "건설 품질관리 시스템 운영 중 발생하는 이슈 수정 및 기능 개선",
+    description:
+      "문화유산 3D 시각화 솔루션(H-Eagle)의 운영 중 발견된 오류를 수정하고, 사용자 피드백을 반영해 기능 개선 작업 수행",
     skills: ["React", "Recoil", "React Query"],
   },
   {
@@ -372,23 +408,31 @@ export const otherProjects = [
     skills: ["React", "Zustand", "MUI"],
   },
   {
-    title: "C-eagle 도면 뷰어 기능 추가",
+    title: "C-Eagle 도면 뷰어 기능 추가",
     period: "2024.07",
     description: "도면 뷰어 기능 추가 (DXF 파일 확대/이동/회전 기능)",
-    skills: ["React", "react-pdf", "File Handling"],
+    skills: ["React"],
   },
   {
-    title: "3D Chat (중단된 프로젝트)",
+    title: "3D Chat - Electron 기반 3D 협업 데스크탑 앱",
     period: "2024.06 ~ 2024.07",
-    description: "WebRTC + Three.js 기반 협업 뷰어 프로토타입 개발",
-    skills: ["React", "Three.js", "WebRTC"],
-    note: "기획 변경으로 중단",
+    description:
+      "3D 모델 파일(GLTF, FBX, IFC 등)을 채팅으로 공유하고, 즉시 데스크탑 뷰어에서 시각화할 수 있는 협업 도구 프로토타입 개발.",
+    skills: [
+      "Electron",
+      "React",
+      "Three.js",
+      "WebRTC",
+      "Formik",
+      "MUI",
+      "Styled-components",
+    ],
   },
   {
     title: "Change Detection (BIM/PCD 분석 솔루션)",
     period: "2024.04 ~ 2024.05",
     description:
-      "BIM과 Point Cloud 데이터를 비교 분석하는 건축 솔루션 UI 개발 참여. 프로젝트 생성, 분석 실행, 시각화, 리포트 테이블 기능 등 구현",
+      "BIM과 Point Cloud 데이터를 비교 분석하는 건축 솔루션 UI 개발 참여.",
     skills: [
       "React",
       "TypeScript",

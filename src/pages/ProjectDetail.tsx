@@ -15,11 +15,14 @@ import { useParams } from "react-router-dom";
 import { projectData } from "../data/projectData";
 import CloseIcon from "@mui/icons-material/Close";
 import { useEffect, useRef, useState } from "react";
+import PhotoPopup from "../components/PhotoPopup";
 
 export default function ProjectDetail() {
   const { id } = useParams();
 
   const [openVideo, setOpenVideo] = useState(false);
+  const [openImageDialog, setOpenImageDialog] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -29,6 +32,11 @@ export default function ProjectDetail() {
     if (videoRef.current) {
       videoRef.current.playbackRate = 2;
     }
+  };
+
+  const handleImageClick = (src: string) => {
+    setSelectedImage(src);
+    setOpenImageDialog(true);
   };
 
   return (
@@ -171,7 +179,9 @@ export default function ProjectDetail() {
                             : { width: "280px" }),
                           boxShadow: "0 0 10px rgba(0,0,0,0.3)",
                           maxWidth: "100%",
+                          cursor: "pointer",
                         }}
+                        onClick={() => handleImageClick(feature.image)}
                       />
                     </Box>
                   )}
@@ -219,6 +229,11 @@ export default function ProjectDetail() {
           ))}
         </Grid>
       </Container>
+      <PhotoPopup
+        open={openImageDialog}
+        onClose={() => setOpenImageDialog(false)}
+        imageSrc={selectedImage}
+      />
     </>
   );
 }

@@ -1,27 +1,24 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
-import Home from "./pages/Home";
+// App.tsx
+import { CssBaseline } from "@mui/material";
 import GlobalStyles from "./styles/GlobalStyles";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 import ProjectDetail from "./pages/ProjectDetail";
 import Layout from "./components/Layout";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Layout />, // Layout이 라우트 래핑
-    children: [
-      { path: "", element: <Home /> },
-      { path: "project/:id", element: <ProjectDetail /> },
-    ],
-  },
-]);
 
 const App = () => {
   return (
     <>
       <GlobalStyles />
       <CssBaseline />
-      <RouterProvider router={router} />
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="project/:id" element={<ProjectDetail />} />
+          </Route>
+        </Routes>
+      </HashRouter>
     </>
   );
 };

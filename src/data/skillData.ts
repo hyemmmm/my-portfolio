@@ -20,6 +20,10 @@ export const skillData = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
   },
   {
+    label: "GitHub",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
+  },
+  {
     label: "Redux Toolkit",
     icon: "/icons/redux-toolkit.png", // 아이콘 없으면 직접 추가 필요
   },
@@ -46,9 +50,5 @@ export const skillData = [
   {
     label: "Three.js",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threejs/threejs-original.svg",
-  },
-  {
-    label: "GitHub",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg",
   },
 ];

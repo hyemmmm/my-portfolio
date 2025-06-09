@@ -40,26 +40,36 @@ export default function Home() {
         {/* Introduction */}
         <Box mb={8}>
           <Typography variant="h4" fontWeight={800} gutterBottom>
-            유저에게 실질적인 가치를 전달하는 프론트엔드 개발자 김혜민입니다.
+            유저에게 실질적 가치를 전달하는 프론트엔드 개발자 김혜민입니다.
           </Typography>
+
           <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-            3년간 React.js를 중심으로 <b>웹과 하이브리드 앱</b>을 개발하며,{" "}
-            <b>사용자가 실제로 편리함을 느낄 수 있는 경험을 만드는데 집중</b>해
-            왔습니다. 단순히 기획된 기능을 구현하는데 그치지 않고,{" "}
-            <b>
-              예외 흐름을 고려한 UX 설계, 복잡한 기능을 직관적으로 표현하는 UI
-              구현
-            </b>
-            , 그리고 <b>불편함을 줄이기 위한 개선 제안과 구현</b>까지 주도적으로
+            3년간 React.js를 중심으로 <b>웹과 하이브리드 앱</b>을 개발해
+            왔습니다.
+            <b>사용자가 실제로 편리함을 느낄 수 있는 경험</b>을 만드는 데
+            집중하며, 단순히 기획된 기능을 구현하는 것을 넘어 실제 사용 환경을
+            고려한 설계를 지향합니다.
+          </Typography>
+
+          <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+            <b>복잡한 기능을 직관적으로 표현하는 UI 개발</b>,
+            <b> 클라이언트-서버 간 데이터 흐름 처리</b>,
+            <b> 다양한 디바이스 환경을 고려한 반응형 웹 디자인 적용</b> 등을
+            통해 더 나은 사용자 경험을 위한 <b>기능 개선과 구현</b>을 주도적으로
             수행해 왔습니다.
           </Typography>
+
           <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-            Three.js 기반의 3D 뷰어 개발, WebRTC를 활용한 실시간 통신 등{" "}
-            <b>기술적 복잡도가 높은 환경에서도 구조적인 접근으로 문제를 해결</b>
-            하며 팀의 개발 품질과 속도를 함께 끌어올렸습니다.
+            또한 Three.js 기반의 3D 뷰어 개발, WebRTC 기반의 실시간 통신 등
+            <b>
+              {" "}
+              기술적 복잡도가 높은 환경에서도 구조적인 접근으로 문제를 해결
+            </b>
+            하며 팀의 개발 품질과 속도를 함께 끌어올린 경험이 있습니다.
           </Typography>
+
           <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-            앞으로도 ‘잘 동작하는 화면’을 넘어,{" "}
+            앞으로도 ‘잘 동작하는 화면’을 넘어,
             <b>사용자에게 진짜 도움이 되는 경험</b>을 만드는 개발자가
             되겠습니다.
           </Typography>
@@ -94,7 +104,7 @@ export default function Home() {
             items={[
               "온라인 이력서 웹 서비스 개발 및 유지 보수",
               "관리자 페이지 개발 및 유지 보수",
-              "해커톤 신청 페이지 개발 및 유지보수",
+              "해커톤 신청 페이지 개발",
             ]}
           />
         </SectionCard>

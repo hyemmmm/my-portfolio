@@ -25,6 +25,9 @@ import starting_main from "../assets/images/starting/s-main.png";
 import starting_mypage from "../assets/images/starting/s-mypage.png";
 import starting_sharing from "../assets/images/starting/starting-sharing.png";
 import starting_video from "../assets/videos/starting.mp4";
+import heagle from "../assets/images/etc/h-eagle.png";
+import ceagle_dxf from "../assets/images/etc/dxf-viewer.png";
+import threeDChat from "../assets/images/etc/3d-chat.png";
 
 export const projectData = [
   {
@@ -52,14 +55,14 @@ export const projectData = [
       {
         title: "로그인",
         image: loginPage,
-        items: ["✅ **아이디/비밀번호 로그인**", "✅ **다국어 모드 지원**"],
+        items: ["✅ 아이디/비밀번호 로그인", "✅ 다국어 모드 지원"],
         skills: ["JWT", "i18n"],
         imageType: "mobile",
       },
       {
         title: "프로젝트 선택",
         image: projectPage,
-        items: ["✅ **프로젝트 선택**"],
+        items: ["✅ 프로젝트 선택"],
         skills: [],
         imageType: "mobile",
       },
@@ -67,14 +70,13 @@ export const projectData = [
         title: "3D 보기",
         image: threeDNote,
         items: [
-          "✅ **터치 이벤트에 따라 3D 조작(이동, 줌 인/줌 아웃, 패닝)**",
-          "✅ **원하는 3D 위치에 노트 생성**",
-          "✅ **카메라 속도 조절**",
-          "✅ **카메라 시점 초기화**",
-          "✅ **카메라 방향 전환**",
-          "✅ **노트 심볼 표시/숨김**",
-          "✅ **페이지 전환 기능**",
-          "✅ **로그아웃**",
+          "✅ 터치 이벤트에 따라 3D 조작(이동, 줌 인/줌 아웃, 패닝)",
+          "✅ 카메라 속도 조절",
+          "✅ 카메라 시점 초기화",
+          "✅ 카메라 방향 전환(6면)",
+          "✅ 노트 심볼 표시/숨김",
+          "✅ 페이지 전환 기능",
+          "✅ 로그아웃",
         ],
         skills: [
           "react-three",
@@ -131,9 +133,15 @@ export const projectData = [
         imageType: "mobile",
       },
       {
-        title: "노트 수정",
+        title: "노트 생성 / 수정",
         image: note_edit,
-        items: ["✅ 노트의 각 항목 수정"],
+        items: [
+          "✅ 원하는 3D 위치에 노트 생성",
+          "✅ 노트 제목, 설명, 담당자 등 주요 정보 입력",
+          "✅ 노트 정보 수정 및 이슈 상태 변경",
+          "✅ 이미지, 도면, 일반 파일 업로드 지원",
+          "✅ 입력값 유효성 검사를 통해 **보안 강화**",
+        ],
         skills: ["react-query"],
         imageType: "mobile",
       },
@@ -392,19 +400,20 @@ export const otherProjects = [
     description:
       "문화유산 3D 시각화 솔루션(H-Eagle)의 사용량 데이터를 시각적으로 분석할 수 있는 관리자용 통계 대시보드 개발",
     descriptionDetail:
-      "- MUI X Charts를 활용해 일간/주간/월간 단위 통계 시각화\n- useMemo를 활용해 대시보드 차트 영역의 리렌더링을 최소화하여 **성능 개선**",
+      "- MUI X Charts를 활용해 일간/주간/월간 단위 통계 시각화\n- useMemo를 활용해 대시보드 차트 영역의 리렌더링을 최소화하여 __성능 개선__",
     skills: ["React", "MUI X Charts", "Day.js"],
     image: sampleImage,
     isSampleImage: true,
   },
   {
-    title: "문화유산 3D 시각화 솔루션(H-Eagle) 유지보수",
+    title: "문화유산 3D 시각화 솔루션(H-Eagle) 유지 보수",
     period: "2025.04",
     description:
       "문화유산 3D 시각화 솔루션(H-Eagle)의 운영 중 발견된 오류를 수정하고, 사용자 피드백을 반영해 기능 개선 작업 수행",
     descriptionDetail:
-      "- 비정상 세션 정리 로직 추가\n- 사용자 요청 기반 UI 편의성 개선 (레이어 토글 기능 등)",
+      "- 사용자 요청 기반 UI 편의성 개선 (레이어 토글 기능 등)",
     skills: ["React", "Recoil", "React Query"],
+    image: heagle,
   },
   {
     title: "3D Note Admin",
@@ -414,6 +423,8 @@ export const otherProjects = [
     descriptionDetail:
       "- 유저/노트/데이터 일괄 관리 기능 개발\n- API 응답 기반 테이블 필터/정렬 구현",
     skills: ["React", "Zustand", "MUI"],
+    image: sampleImage,
+    isSampleImage: true,
   },
   {
     title: "C-Eagle 도면 뷰어 기능 추가",
@@ -422,6 +433,7 @@ export const otherProjects = [
     descriptionDetail:
       "- 기존 PDF 뷰어 대비 DXF 전환으로 로딩 속도 개선\n- Canvas 기반 마우스 이동/휠 줌 기능 구현",
     skills: ["React"],
+    image: ceagle_dxf,
   },
   {
     title: "3D Chat - Electron 기반 3D 협업 데스크탑 앱",
@@ -429,7 +441,9 @@ export const otherProjects = [
     description:
       "3D 모델 파일(GLTF, FBX, IFC 등)을 채팅으로 공유하고, 즉시 데스크탑 뷰어에서 시각화할 수 있는 협업 도구 프로토타입 개발.",
     descriptionDetail:
-      "- WebRTC 연결을 통한 실시간 3D 모델 송수신 구현\n- Drag & Drop 기반 3D 파일 공유\n- Three.js 뷰어와 채팅창 동기화 UI 설계",
+      "- 다양한 3D 포맷(GLB, FBX, OBJ, IFC 등)의 업로드 및 실시간 미리보기\n" +
+      "- 채팅 내 모델 공유와 뷰어 동기화를 위한 사용자 인터페이스 설계\n" +
+      "- Viewpoint 저장 및 복원 기능 구현 (React Three Fiber 기반)\n",
     skills: [
       "Electron",
       "React",
@@ -439,6 +453,7 @@ export const otherProjects = [
       "MUI",
       "Styled-components",
     ],
+    image: threeDChat,
   },
   {
     title: "Change Detection (BIM/PCD 분석 솔루션)",
@@ -446,7 +461,10 @@ export const otherProjects = [
     description:
       "BIM과 Point Cloud 데이터를 비교 분석하는 건축 솔루션 UI 개발 참여.",
     descriptionDetail:
-      "- 분석 결과를 BIM/PCD에 클리핑 포인트로 시각화\n- 분석 로그 및 상태 실시간 반영 UI 구현\n- 보고서 출력용 ExcelJS 연동",
+      "- BIM과 PCD 데이터를 업로드하고 비교 분석하는 전체 UI 흐름 설계 및 구현\n" +
+      "- 프로젝트 생성, 데이터 관리 결과 리포트 출력 지원\n" +
+      "- 3D Viewer에서 분석 결과 하이라이팅, 클리핑, 이미지 저장 기능 구현\n" +
+      "- Tree 뷰 탐색, 상세 모달, Admin 전용 기능 포함",
     skills: [
       "React",
       "TypeScript",
@@ -464,8 +482,12 @@ export const otherProjects = [
     description:
       "이력서 서비스 관리 기능 개발 (권한 관리, 유저 검색, 이력서 검수 등)",
     descriptionDetail:
-      "- 사용자 상태별 필터링, 검색 기능 구현\n- 이력서 항목 검수 및 승인 기능 개발\n- 접근 권한에 따라 기능/화면 제어",
-    skills: ["React", "TypeScript", "Styled-components", "React Query"],
+      "- 사용자 관리, 결제 내역, 팀/참가자 관리 등 주요 기능 구현\n" +
+      "- 권한별 사용자 구분, 임시 계정 관리, 통합 결제 및 환불 내역 관리 기능 개발\n" +
+      "- MUI 기반 테이블 UI와 검색/필터 기능, 페이지네이션 등 공통 유틸 훅 적용\n" +
+      "- 관리자 변경 이력 기록, 리포트 다운로드 등 운영 편의 기능 추가\n" +
+      "- Dev / Main 브랜치 자동 배포 연동 및 코드 스타일/커밋 컨벤션 정립",
+    skills: ["React", "TypeScript", "Styled-components", "React Query", "MUI"],
     image: sampleImage,
     isSampleImage: true,
   },

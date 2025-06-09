@@ -191,7 +191,12 @@ export default function ProjectDetail() {
                       <Typography key={idx} variant="body1" paragraph>
                         <span
                           dangerouslySetInnerHTML={{
-                            __html: item.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>"),
+                            __html: item
+                              .replace(/\*\*(.*?)\*\*/g, "<b>$1</b>")
+                              .replace(
+                                /__(.*?)__/g,
+                                '<u style="text-underline-offset: 3px;">$1</u>'
+                              ),
                           }}
                         />
                       </Typography>

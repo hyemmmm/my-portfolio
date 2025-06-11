@@ -43,35 +43,21 @@ export default function Home() {
             유저에게 실질적 가치를 전달하는 프론트엔드 개발자 김혜민입니다.
           </Typography>
 
-          <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-            3년간 React.js를 중심으로 <b>웹과 하이브리드 앱</b>을 개발해
-            왔습니다.
-            <b>사용자가 실제로 편리함을 느낄 수 있는 경험</b>을 만드는 데
-            집중하며, 단순히 기획된 기능을 구현하는 것을 넘어 실제 사용 환경을
-            고려한 설계를 지향합니다.
+          <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }} mt={3}>
+            ✅ <b>React</b> 기반으로 웹과 하이브리드 앱을 개발하며 <b>3년</b>간
+            다양한 프로젝트를 경험했습니다. 실제 사용 환경을 고려한 UI 개발과
+            상태 관리, 반응형 설계에 익숙합니다.
           </Typography>
 
           <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-            <b>복잡한 기능을 직관적으로 표현하는 UI 개발</b>,
-            <b> 클라이언트-서버 간 데이터 흐름 처리</b>,
-            <b> 다양한 디바이스 환경을 고려한 반응형 웹 디자인 적용</b> 등을
-            통해 더 나은 사용자 경험을 위한 <b>기능 개선과 구현</b>을 주도적으로
-            수행해 왔습니다.
-          </Typography>
-
-          <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
-            또한 Three.js 기반의 3D 뷰어 개발, WebRTC 기반의 실시간 통신 등
-            <b>
-              {" "}
-              기술적 복잡도가 높은 환경에서도 구조적인 접근으로 문제를 해결
-            </b>
-            하며 팀의 개발 품질과 속도를 함께 끌어올린 경험이 있습니다.
+            ✅ Redux, Zustand, Recoil 등 다양한 <b>상태 관리</b> 라이브러리를
+            사용해 복잡한 데이터 흐름을 구조적으로 관리해 왔고, 팀 내 개발 환경
+            개선에도 기여했습니다.
           </Typography>
 
           <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-            앞으로도 ‘잘 동작하는 화면’을 넘어,
-            <b>사용자에게 진짜 도움이 되는 경험</b>을 만드는 개발자가
-            되겠습니다.
+            ✅ WebRTC 실시간 통신, <b>Three.js</b> 기반 3D 뷰어 등 기술 난이도
+            높은 프로젝트도 구조적으로 접근해 문제를 해결한 경험이 있습니다.
           </Typography>
         </Box>
 

@@ -79,7 +79,7 @@ export default function Home() {
             title="컨워스 (2024.04 - ing)"
             subtitle="Frontend Engineer / 개발팀"
             items={[
-              "건설 현장 관리 앱의 WebView 개발 및 유지 보수",
+              "앱 내 WebView 환경에서의 건설 현장 관리 서비스 개발 및 유지 보수",
               "시설물 변화 탐지 솔루션의 웹 프론트엔드 개발",
               "3D 모델 송수신 기능을 가진 데스크탑 앱의 프론트엔드 개발",
             ]}
@@ -90,7 +90,7 @@ export default function Home() {
             items={[
               "온라인 이력서 웹 서비스 개발 및 유지 보수",
               "관리자 페이지 개발 및 유지 보수",
-              "해커톤 신청 페이지 개발",
+              "Google Tag Manager 및 Analytics 연동을 통한 사용자 이벤트 수집 및 분석 로직 구현",
             ]}
           />
         </SectionCard>

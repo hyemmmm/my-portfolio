@@ -14,6 +14,8 @@ import ProjectOverview from "../components/ProjectOverview";
 import EtcProjectDetail from "../components/EtcProjectDetail";
 import LanguageToggle from "../components/LanguageToggle";
 import { useTranslation } from "react-i18next";
+import { careerSummaryData } from "../data/careerSummaryData";
+import CareerSummaryItem from "../components/CareerSummaryItem";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -114,6 +116,20 @@ export default function Home() {
                 "Google Tag Manager 및 Analytics 연동을 통한 사용자 이벤트 수집 및 분석 로직 구현",
               ]}
             />
+          </SectionCard>
+
+          {/* Career Summary */}
+          <SectionCard title={t("career-summary")}>
+            {careerSummaryData.map((item) => (
+              <CareerSummaryItem
+                key={item.id}
+                title={item.title}
+                period={item.period}
+                achievement={item.achievement}
+                roles={item.roles}
+                skills={item.skills}
+              />
+            ))}
           </SectionCard>
 
           {/* Projects */}

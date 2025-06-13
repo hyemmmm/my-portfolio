@@ -69,8 +69,10 @@ export default function Home() {
             </Typography>
 
             <Typography variant="body1" sx={{ lineHeight: 1.8 }}>
-              ✅ WebRTC 실시간 통신, <b>Three.js</b> 기반 3D 뷰어 등 기술 난이도
-              높은 프로젝트도 구조적으로 접근해 문제를 해결한 경험이 있습니다.
+              ✅ 사내 WebRTC 라이브러리를 활용해 <b>실시간 데이터 통신</b>{" "}
+              로직을 프론트엔드에 구조적으로 적용하고, 사용자 이벤트를 서버로
+              전달해 <b>Three.js 3D 뷰어</b>에 실시간 반영되는 흐름을
+              구현했습니다.
             </Typography>
           </Box>
 

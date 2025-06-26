@@ -17,12 +17,15 @@ import { useTranslation } from "react-i18next";
 import { careerSummaryData } from "../data/careerSummaryData";
 import CareerSummaryItem from "../components/CareerSummaryItem";
 import SideNav from "../components/SideNav";
+import DemoPopup from "../components/DemoPopup";
+import TreeviewDemoPopup from "../components/demoPopup/TreeviewDemoPopup";
 
 export default function Home() {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
   const [selectedProject, setSelectedProject] = useState(null);
+  const [demoPopup, setDemoPopup] = useState(false);
 
   const handleOpenProjectDetail = (project: any) => {
     setSelectedProject(project);
@@ -169,6 +172,41 @@ export default function Home() {
                 />
               ))}
             </SectionCard>
+          </div>
+
+          {/* 구현 예제 */}
+          <div id="examples">
+            <SectionCard title={t("view-demo")}>
+              <Typography variant="h6" fontWeight={700} sx={{ mb: 2 }}>
+                📂 TreeView 컴포넌트 (대용량 최적화)
+              </Typography>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2 }}>
+                대량의 노드 렌더링에서 느려지는 문제를 해결하기 위해, 기존
+                라이브러리 대신 직접 단계적 로딩 방식으로 TreeView를
+                구현했습니다. 노드 확장 시점에 비동기로 자식 데이터를 불러오며,
+                성능과 사용자 경험을 동시에 고려한 구조입니다.
+              </Typography>
+              <Box sx={{ display: "flex", gap: 2 }}>
+                <span
+                  style={{
+                    padding: "8px 16px",
+                    backgroundColor: "#444",
+                    color: "#fff",
+                    borderRadius: "8px",
+                    textDecoration: "none",
+                    fontWeight: 600,
+                    cursor: "pointer",
+                  }}
+                  onClick={() => setDemoPopup(true)}
+                >
+                  미리보기
+                </span>
+              </Box>
+            </SectionCard>
+            <TreeviewDemoPopup
+              open={demoPopup}
+              onClose={() => setDemoPopup(false)}
+            />
           </div>
 
           {/* Skills */}

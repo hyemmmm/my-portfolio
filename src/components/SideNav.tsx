@@ -11,6 +11,7 @@ export default function SideNav() {
     { id: "experiences", title: t("experiences") },
     { id: "career-summary", title: t("career-summary") },
     { id: "projects", title: t("projects") },
+    { id: "examples", title: t("view-demo") },
     { id: "skills", title: t("skills") },
   ];
 

@@ -190,17 +190,40 @@ export default function Home() {
                 <span
                   style={{
                     padding: "8px 16px",
-                    backgroundColor: "#444",
+                    backgroundColor: "#1976d2", // 강조색 (MUI primary)
                     color: "#fff",
                     borderRadius: "8px",
                     textDecoration: "none",
                     fontWeight: 600,
                     cursor: "pointer",
+                    transition: "background-color 0.2s",
                   }}
                   onClick={() => setDemoPopup(true)}
                 >
                   미리보기
                 </span>
+                <a
+                  href="https://github.com/hyemmmm/my-portfolio/blob/main/src/components/treeview/TreeView.tsx"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    padding: "8px 16px",
+                    backgroundColor: "#eee",
+                    color: "#333",
+                    borderRadius: "8px",
+                    textDecoration: "none",
+                    fontWeight: 600,
+                    transition: "background-color 0.2s",
+                  }}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#ddd")
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.backgroundColor = "#eee")
+                  }
+                >
+                  코드 보기
+                </a>
               </Box>
             </SectionCard>
             <TreeviewDemoPopup

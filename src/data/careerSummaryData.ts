@@ -20,8 +20,8 @@ export const careerSummaryData = [
       },
       {
         id: "treeview",
-        text: "트리 구조 데이터를 기반으로 TreeView 컴포넌트를 직접 구현하여 UI 요구사항에 최적화",
-        popup: false,
+        text: "대량 노드의 렌더링 성능 문제를 해결하기 위해, 비동기 단계적 로딩 방식의 TreeView를 직접 구현",
+        popup: true,
       },
       {
         id: "admin-config",

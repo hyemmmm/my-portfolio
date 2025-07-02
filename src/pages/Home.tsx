@@ -17,15 +17,16 @@ import { useTranslation } from "react-i18next";
 import { careerSummaryData } from "../data/careerSummaryData";
 import CareerSummaryItem from "../components/CareerSummaryItem";
 import SideNav from "../components/SideNav";
-import DemoPopup from "../components/DemoPopup";
 import TreeviewDemoPopup from "../components/demoPopup/TreeviewDemoPopup";
+import { usePopupStore } from "../store/popupStore";
 
 export default function Home() {
   const navigate = useNavigate();
   const { t } = useTranslation();
 
+  const { openPopupId, open, close } = usePopupStore((state) => state);
+
   const [selectedProject, setSelectedProject] = useState(null);
-  const [demoPopup, setDemoPopup] = useState(false);
 
   const handleOpenProjectDetail = (project: any) => {
     setSelectedProject(project);
@@ -198,7 +199,7 @@ export default function Home() {
                     cursor: "pointer",
                     transition: "background-color 0.2s",
                   }}
-                  onClick={() => setDemoPopup(true)}
+                  onClick={() => open("treeview")}
                 >
                   미리보기
                 </span>
@@ -227,8 +228,8 @@ export default function Home() {
               </Box>
             </SectionCard>
             <TreeviewDemoPopup
-              open={demoPopup}
-              onClose={() => setDemoPopup(false)}
+              open={openPopupId === "treeview"}
+              onClose={close}
             />
           </div>
 

@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import { usePopupStore } from "../store/popupStore";
 
 type Role = {
   id: string;
@@ -21,6 +22,8 @@ export default function CareerSummaryItem({
   roles,
   skills,
 }: Props) {
+  const { open } = usePopupStore((state) => state);
+
   return (
     <Box
       sx={{
@@ -88,7 +91,7 @@ export default function CareerSummaryItem({
                   <>
                     👉
                     <span
-                      onClick={() => {}}
+                      onClick={() => open("treeview")}
                       style={{
                         color: "#90caf9",
                         cursor: "pointer",
@@ -97,7 +100,7 @@ export default function CareerSummaryItem({
                         fontSize: "14px",
                       }}
                     >
-                      더 보기
+                      Demo
                     </span>
                   </>
                 )}

@@ -271,8 +271,8 @@ const PageWrapper = styled.div`
 `;
 
 const LanguageToggleWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 24px;
-  right: 24px;
+  right: 31px;
   z-index: 1000;
 `;

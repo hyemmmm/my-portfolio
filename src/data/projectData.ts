@@ -199,6 +199,7 @@ export const projectData = [
         imageType: "mobile",
       },
     ],
+    video: "https://www.youtube.com/watch?v=rcssmKCToOA",
   },
   // {
   //   id: "change-detection",
@@ -461,9 +462,9 @@ export const otherProjects = [
     description:
       "BIM과 Point Cloud 데이터를 비교 분석하는 건축 솔루션 UI 개발 참여.",
     descriptionDetail:
-      "- BIM과 PCD 데이터를 업로드하고 비교 분석하는 전체 UI 흐름 설계 및 구현\n" +
-      "- 프로젝트 생성, 데이터 관리 결과 리포트 출력 지원\n" +
-      "- 3D Viewer에서 분석 결과 하이라이팅, 클리핑, 이미지 저장 기능 구현\n" +
+      "- BIM과 PCD 데이터를 업로드하고 비교 분석하는 전체 UI/UX 흐름 설계 및 구현\n" +
+      "- 프로젝트 생성, 데이터 관리 결과 리포트(Excel) 출력 기능 구현\n" +
+      "- 3D Viewer에서 분석 결과 모델 하이라이팅, 시점 이동, 이미지 저장 기능 구현\n" +
       "- Tree 뷰 탐색, 상세 모달, Admin 전용 기능 포함",
     skills: [
       "React",
@@ -475,6 +476,7 @@ export const otherProjects = [
       "camera-controls",
     ],
     image: cd_resultView,
+    video: "https://www.youtube.com/watch?v=AjECx0wG_FA",
   },
   {
     title: "Start-ing 관리자 페이지",

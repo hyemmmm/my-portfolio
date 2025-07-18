@@ -18,6 +18,7 @@ type Props = {
   project: {
     title: string;
     period?: string;
+    video?: string;
     description: string;
     descriptionDetail: string;
     skills?: string[];
@@ -115,6 +116,36 @@ export default function EtcProjectDetail({ open, onClose, project }: Props) {
               }
             }
           >
+            {project.video && (
+              <Box sx={{ mb: 2 }}>
+                <Chip
+                  label="📽 video 보기"
+                  component="a"
+                  href={project.video}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  clickable
+                  sx={{
+                    fontSize: "15px",
+                    px: 2.5,
+                    py: 1.2,
+                    backgroundColor: "#1976d2",
+                    color: "#fff",
+                    border: "none",
+                    borderRadius: "999px",
+                    boxShadow: "0 2px 6px rgba(0, 0, 0, 0.3)",
+                    fontWeight: 600,
+                    "&:hover": {
+                      backgroundColor: "#1976d2",
+                      color: "#fff",
+                      textDecoration: "none",
+                      boxShadow: "0 2px 6px rgba(0, 0, 0, 0.3)",
+                    },
+                  }}
+                />
+              </Box>
+            )}
+
             {project.period && (
               <Typography
                 variant="caption"
@@ -128,6 +159,7 @@ export default function EtcProjectDetail({ open, onClose, project }: Props) {
                 📅 {project.period}
               </Typography>
             )}
+
             <Typography variant="body2" sx={{ whiteSpace: "pre-line", mb: 2 }}>
               {project.description}
             </Typography>

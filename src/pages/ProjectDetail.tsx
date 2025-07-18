@@ -60,7 +60,13 @@ export default function ProjectDetail() {
             <Box sx={{ mb: 4 }}>
               <Chip
                 label="📽 video 보기"
-                onClick={() => setOpenVideo(true)}
+                onClick={() => {
+                  if (project.video.startsWith("https")) {
+                    window.open(project.video, "_blank", "noopener,noreferrer");
+                  } else {
+                    setOpenVideo(true);
+                  }
+                }}
                 clickable
                 sx={{
                   fontSize: "16px",
